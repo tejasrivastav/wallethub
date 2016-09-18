@@ -1,26 +1,5 @@
 var webapp;
 (function (webapp) {
-    var components;
-    (function (components) {
-        var BaseComponent = (function () {
-            function BaseComponent() {
-                return {
-                    templateUrl: "/dist/partials/baseComponent.html",
-                    controller: [
-                        "$scope",
-                        "$state",
-                        function ($scope, $state) {
-                            //$state.transitionTo("base.profile.form")
-                        }]
-                };
-            }
-            return BaseComponent;
-        })();
-        components.BaseComponent = BaseComponent;
-    })(components = webapp.components || (webapp.components = {}));
-})(webapp || (webapp = {}));
-var webapp;
-(function (webapp) {
     var controllers;
     (function (controllers) {
         var DonorListController = (function () {
@@ -84,7 +63,7 @@ var webapp;
                 this.currentDonation = _currentDonation;
             };
             DataService.prototype.fetchDonorsList = function () {
-                return this.$http.get("/dummyData.json")
+                return this.$http.get("/wallethub/dummyData.json")
                     .then(function (respone) {
                     return respone.data;
                 });

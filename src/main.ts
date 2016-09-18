@@ -42,5 +42,4 @@ module webapp {
         app.service("ObjUtil",webapp.services.ObjUtil);
     }
 }
-
 webapp.bootstrap();

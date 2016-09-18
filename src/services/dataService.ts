@@ -21,7 +21,7 @@ module webapp.services {
         }
 
         public fetchDonorsList(){
-            return this.$http.get("/dummyData.json")
+            return this.$http.get("/wallethub/dummyData.json")
             .then(function(respone){
                 return respone.data;
             });
