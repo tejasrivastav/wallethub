@@ -447,13 +447,13 @@ var webapp;
                     name: "base",
                     url: "",
                     abstract: true,
-                    templateUrl: "/dist/partials/baseComponent.html"
+                    templateUrl: "/wallethub/dist/partials/baseComponent.html"
                 };
                 var HomeState = {
                     name: "home",
                     url: "/home",
                     parent: "base",
-                    templateUrl: "/dist/partials/home.html"
+                    templateUrl: "/wallethub/dist/partials/home.html"
                 };
                 var profileState = {
                     parent: "base",
@@ -466,14 +466,14 @@ var webapp;
                     parent: 'profile',
                     name: 'form',
                     url: '/form',
-                    templateUrl: '/dist/partials/profile-form.html',
+                    templateUrl: '/wallethub/dist/partials/profile-form.html',
                     controller: webapp.controllers.ProfileFormController
                 };
                 var profileConfirmState = {
                     parent: 'profile',
                     name: 'confirm',
                     url: '/confirm',
-                    templateUrl: '/dist/partials/profile-confirm.html',
+                    templateUrl: '/wallethub/dist/partials/profile-confirm.html',
                     controller: webapp.controllers.ProfileConfirmController,
                     params: { auth: null }
                 };
@@ -481,7 +481,7 @@ var webapp;
                     parent: "base",
                     name: "donorList",
                     url: "/donor/list",
-                    templateUrl: "/dist/partials/donor-list.html",
+                    templateUrl: "/wallethub/dist/partials/donor-list.html",
                     controller: webapp.controllers.DonorListController
                 };
                 var RouteNotFound = {
