@@ -1,0 +1,64 @@
+<md-card class="profile-form anim-slide-right transition-speed">
+    <md-card-title>
+        <md-card-title-text>
+        <span class="md-headline">Confirmation</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+        <div layout="row">
+            <div layout="column" layout-align="start center" flex="33">
+                <div><i class="material-icons profile-icon">account_circle</i></div>
+                <div>{{user.name}}</div>
+                <div>{{user.phone}}</div>
+            </div>
+            <div layout="column" layout-align="space-around center" class="donations">
+                <div layout="row" layout-align="space-around center" class="donation">
+                    <div><i class="material-icons donations-icon">home</i></div>
+                    <div layout="row" layout-align="space-between center" class="donation-detail">
+                        <div>Needy</div>
+                        <div class="donation-detail-amount">{{user.donation.needy}}</div>
+                    </div>
+                </div>
+                <div layout="row" layout-align="space-around center" class="donation">
+                    <div><i class="material-icons donations-icon">local_hospital</i></div>
+                    <div layout="row" layout-align="space-between center" class="donation-detail">
+                        <span>Hospital</span>
+                        <span class="donation-detail-amount">{{user.donation.hospital}}</span>
+                    </div>
+                </div>
+                <div layout="row" layout-align="space-around center" class="donation">
+                    <div><i class="material-icons donations-icon">school</i></div>
+                    <div layout="row" layout-align="space-between center" class="donation-detail">
+                        <span>Education</span>
+                        <span class="donation-detail-amount">{{user.donation.edu}}</span>
+                    </div>
+                </div>
+                <md-divider class="w100"></md-divider>
+                <div layout="row" layout-align="space-around center" class="donation">
+                    <div><i class="material-icons donations-icon">attach_money</i></div>
+                    <div layout="row" layout-align="space-between center" class="donation-detail">
+                        <span>Total</span>
+                        <span class="donation-detail-amount">{{user.donation.total}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div layout="row" layout-align="space-around center" class="credit-container">
+            <div layout="row" flex="33" class="company">
+                <span class="company-Name">WalletHub</span>
+                <span>credits</span>
+            </div>
+            <div layout="column" class="w100" flex>
+                <div>Please enter your card details</div>
+                <card-info data-ng-model="credit"></card-info>
+            </div>
+        </div>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="end center">
+        <md-button class="md-primary md-raised" 
+            data-ng-click="donate()"
+            data-ng-disabled="credit.length<=16">
+            Donate
+        </md-button>
+    </md-card-actions>
+</md-card>

@@ -1,0 +1,121 @@
+.app {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    cursor: pointer;
+    height: 100%;
+    line-height: 3em;
+}
+
+.description {
+    position: relative;
+    padding: 0;
+}
+
+.description-content {
+    position: absolute;
+    top: 0em;
+    right: 3.5em;
+    width: 14em;
+    color: #d8d5d5;
+}
+
+.description-backdrop{
+    position: absolute;
+    top: 0em;
+    background: #000000;
+    opacity: 0.75;
+    height: 100%;
+    width: 16em;
+    right: 2.75em;
+}
+
+.app-button {
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.donation-button {
+    background: #0ab52b;
+}
+
+.donors-button {
+    background: #11b38a;
+}
+
+.profile {
+    padding: 2em 3em;
+}
+
+.profile-icon {
+    font-size: 8em;
+}
+
+.w100,
+.donations,
+.donation,
+.donation-detail {
+    width: 100%;
+}
+
+.donations {
+    padding: 0 3em;
+}
+
+.donations-icon {
+    font-size: 2em;
+    padding: 0 0.3em;
+}
+
+.donation-detail-amount {
+    padding: 0 1em;
+} 
+
+.credit-container {
+    margin-top: 16px;
+    background: linear-gradient(to right, #00afc6 0%,#55d6a4 75%,#55d6a4 100%);
+    color: #fff;
+    padding: 2em 0;
+}
+
+.company {
+    font-family: 'PT Sans', sans-serif;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.company-Name {
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 2em;
+    margin-right: 5px;
+}
+
+.credit-info-container input{
+    width: 80px;
+    text-transform: uppercase; 
+}
+
+.donor-list-container {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.donor {
+    max-height: 25% !important;
+}
+
+.transition-speed {
+    -webkit-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    -ms-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+}

@@ -1,0 +1,55 @@
+<md-card class="profile-form anim-slide-right transition-speed">
+    <md-card-title>
+        <md-card-title-text>
+        <span class="md-headline">Registeration Form</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+        <form name="donationInit">
+            <div>
+                <md-input-container>
+                    <label>Name</label>
+                    <md-icon><i class="material-icons">account_circle</i></md-icon>
+                    <input ng-model="user.name" required>
+                </md-input-container>
+            </div>
+            <div>
+                <phone-number ng-model="user.phone" required>
+                </phone-number> 
+            </div>
+            <div>
+                <currency 
+                    ng-model="user.donation.needy" 
+                    ng-change="calculateTotalValue()" 
+                    label="'Needy'"
+                    icon="home">
+                </currency>
+                <currency 
+                    ng-model="user.donation.hospital" 
+                    ng-change="calculateTotalValue()"
+                    label="'Hospital'"
+                    icon="local_hospital">
+                </currency>
+                <currency 
+                    ng-model="user.donation.edu" 
+                    ng-change="calculateTotalValue()"
+                    label="'Education'"
+                    icon="school">
+                </currency>
+                <currency 
+                    ng-model="user.donation.total"
+                    ng-model-options="{ debounce: 300 }" 
+                    ng-change="totalValueChanged()" 
+                    label="'Total Donation'">
+                </currency>
+            </div>
+        </form>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="end center">
+        <md-button class="md-primary md-raised" 
+            data-ng-click="proceed(user)" 
+            data-ng-disabled="donationInit.$invalid">
+                Proceed
+        </md-button>
+    </md-card-actions>
+</md-card>

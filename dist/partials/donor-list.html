@@ -1,0 +1,39 @@
+<div layout="column" class="anim-slide-below transition-speed">
+    <div layout="row">
+        <md-input-container flex="75">
+            <label>Search </label>
+            <input ng-model="donor.search">
+        </md-input-container>
+        <md-input-container flex>
+            <label>Sort By</label>
+            <md-select ng-model="sortBy">
+                <md-option value="0"><em>None</em></md-option>
+                <md-option value="phoneNumber">Phone Number</md-option>
+                <md-option value="donation.inNumber">Donation</md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+    <div layout="flex" layout-sm="column" class="donor-list-container">
+        <md-card flex="30" 
+            flex-xs="100"
+            flex-sm="100"
+            class="donor"
+            data-ng-repeat="donor in filteredDonors = (donors | filter:donor.search)| orderBy:sortBy">
+            <md-card-title>
+                <md-card-title-media>
+                    <div class="md-media-xl">
+                        <i class="material-icons profile-icon">account_circle</i>
+                    </div>
+                </md-card-title-media>
+                <md-card-title-text>
+                    <span class="md-headline">{{donor.name}}</span>
+                    <span class="md-subhead">{{donor.phoneNumber}}</span>
+                    <span class="md-subhead">{{donor.donation.inString}}</span>
+                </md-card-title-text>
+            </md-card-title>
+        </md-card>
+    </div>
+    <div layout="row" layout-align="center center" ng-hide="filteredDonors.length">
+        No Donor(s) found
+    </div>
+</div>
