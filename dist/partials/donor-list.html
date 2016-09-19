@@ -1,5 +1,5 @@
 <div layout="column" class="anim-slide-below transition-speed">
-    <div layout="row">
+    <div layout="row" layout-padding>
         <md-input-container flex="75">
             <label>Search </label>
             <input ng-model="donor.search">
@@ -7,9 +7,8 @@
         <md-input-container flex>
             <label>Sort By</label>
             <md-select ng-model="sortBy">
-                <md-option value="0"><em>None</em></md-option>
+                <md-option value="0" data-ng-selected="true"><em>Default</em></md-option>
                 <md-option value="name">Name</md-option>
-                <md-option value="phoneNumber">Phone Number</md-option>
                 <md-option value="donation.inNumber">Donation</md-option>
             </md-select>
         </md-input-container>
