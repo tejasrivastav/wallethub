@@ -426,13 +426,13 @@ var webapp;
                     name: "base",
                     url: "",
                     abstract: true,
-                    templateUrl: "/wallethub/dist/partials/baseComponent.html"
+                    templateUrl: "/dist/partials/baseComponent.html"
                 };
                 var HomeState = {
                     name: "home",
                     url: "/home",
                     parent: "base",
-                    templateUrl: "/wallethub/dist/partials/home.html"
+                    templateUrl: "/dist/partials/home.html"
                 };
                 var profileState = {
                     parent: "base",
@@ -445,14 +445,14 @@ var webapp;
                     parent: 'profile',
                     name: 'form',
                     url: '/form',
-                    templateUrl: '/wallethub/dist/partials/profile-form.html',
+                    templateUrl: '/dist/partials/profile-form.html',
                     controller: webapp.controllers.ProfileFormController
                 };
                 var profileConfirmState = {
                     parent: 'profile',
                     name: 'confirm',
                     url: '/confirm',
-                    templateUrl: '/wallethub/dist/partials/profile-confirm.html',
+                    templateUrl: '/dist/partials/profile-confirm.html',
                     controller: webapp.controllers.ProfileConfirmController,
                     params: { auth: null }
                 };
@@ -460,13 +460,13 @@ var webapp;
                     parent: "base",
                     name: "donorList",
                     url: "/donor/list",
-                    templateUrl: "/wallethub/dist/partials/donor-list.html",
+                    templateUrl: "/dist/partials/donor-list.html",
                     controller: webapp.controllers.DonorListController
                 };
                 var RouteNotFound = {
                     name: "routeNotFound",
                     url: "/404",
-                    template: "<div class='anim-slide-below transition-speed'>No Route Found <span ui-sref='home'>CLick to go home</span></div> "
+                    templateUrl: "/dist/partials/404.html"
                 };
                 $stateProvider
                     .state(baseState)
