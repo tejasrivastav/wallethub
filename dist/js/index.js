@@ -430,7 +430,7 @@ var webapp;
                 };
                 var HomeState = {
                     name: "home",
-                    url: "/home",
+                    url: "",
                     parent: "base",
                     templateUrl: "/dist/partials/home.html"
                 };
